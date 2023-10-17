@@ -9,9 +9,14 @@ import {
 import { CgProfile } from "react-icons/cg";
 import { AiOutlineWallet, AiOutlineRight } from "react-icons/ai";
 import { MdLiveHelp } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { TbHexagonNumber0 } from "react-icons/tb";
 export default function Sidemenu() {
+  const location = useLocation();
+  const pathArray = location.pathname.split('/'); // Split the path by '/' to get an array
+
+  // The last element of the array should be "dashboard" in your URL
+  const value = pathArray[pathArray.length - 1];
   return (
     <div className="side-menu">
       <nav>
@@ -19,6 +24,7 @@ export default function Sidemenu() {
           <div className="menu-name">
             <h2>
               <TbHexagonNumber0 className="icon1" />
+              {value}
             </h2>
           </div>
           <Link style={{ color: "#2e97a7" }} to="/dashboard">
