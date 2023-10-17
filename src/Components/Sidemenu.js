@@ -12,10 +12,6 @@ import { MdLiveHelp } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { TbHexagonNumber0 } from "react-icons/tb";
 export default function Sidemenu() {
-  const [menu, setmenu] = useState([]);
-  let menuui;
-  const menuitem = document.getElementById("Dashboard");
-  //console.log(menuitem);
   return (
     <div className="side-menu">
       <nav>
@@ -23,7 +19,6 @@ export default function Sidemenu() {
           <div className="menu-name">
             <h2>
               <TbHexagonNumber0 className="icon1" />
-              {menu}
             </h2>
           </div>
           <Link style={{ color: "#2e97a7" }} to="/dashboard">
