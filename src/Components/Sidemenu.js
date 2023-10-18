@@ -13,10 +13,11 @@ import { Link, useLocation } from "react-router-dom";
 import { TbHexagonNumber0 } from "react-icons/tb";
 export default function Sidemenu() {
   const location = useLocation();
-  const pathArray = location.pathname.split('/'); // Split the path by '/' to get an array
+  const pathArray = location.pathname.split("/"); // Split the path by '/' to get an array
 
   // The last element of the array should be "dashboard" in your URL
   const value = pathArray[pathArray.length - 1];
+
   return (
     <div className="side-menu">
       <nav>
